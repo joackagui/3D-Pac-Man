@@ -120,14 +120,14 @@ public class Player : MonoBehaviour
 
         movementInput = Vector2.zero;
         rb.linearVelocity = Vector3.zero;
-        GetComponent<Collider>().enabled = false;
+        //GetComponent<Collider>().enabled = false;
         chompSource.Stop();
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         sfxSource.PlayOneShot(deathClip);
-        Invoke(nameof(LoadMainMenu), 0.5f);
+        Invoke(nameof(LoadMainMenu), 1.5f);
     }
 
     void LoadMainMenu()
