@@ -7,7 +7,8 @@ public class PowerPellet : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.AddScore(100);
-            Destroy(this.gameObject);
+            GameManager.Instance.PowerPelletEaten();
+            Destroy(gameObject);
         }
     }
 }

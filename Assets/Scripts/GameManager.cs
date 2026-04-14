@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
+    public static event Action OnPowerPelletEaten;
     private int score = 0;
     private int totalPellets = 0;
     private int collectedPellets = 0;
@@ -31,11 +32,15 @@ public class GameManager : MonoBehaviour
         collectedPellets++;
 
         Debug.Log($"Collected {collectedPellets}/{totalPellets} — Score: {score}");
-
         UIManager.Instance?.UpdateScore(score);
 
         if (totalPellets > 0 && collectedPellets >= totalPellets)
             Win();
+    }
+
+    public void PowerPelletEaten()
+    {
+        OnPowerPelletEaten?.Invoke();
     }
 
     void Win()

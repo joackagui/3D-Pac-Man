@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 4, z: 5}
+  m_LocalScale: {x: 2, y: 1.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,11 +129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0dc2417ccc841788f1a49529e1d975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 5
-  damping: 1
-  wobbleSpeed: 2
-  wobbleAmount: 0.05
+  normalSpeed: 15
+  currentSpeed: 0
+  normalMaterial: {fileID: 0}
+  frightenedMaterial: {fileID: 2100000, guid: f40711728f0be4a3f88c711343ed878d, type: 2}
   movementClip: {fileID: 8300000, guid: 0257f597eaf8c4d78b9ae4b724b006c3, type: 3}
+  frightenedClip: {fileID: 8300000, guid: c5eef108fde3e4c2fbcffb85d6f649d1, type: 3}
 --- !u!54 &1843769753737110325
 Rigidbody:
   m_ObjectHideFlags: 0
