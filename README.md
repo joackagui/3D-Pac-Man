@@ -163,3 +163,7 @@ Additional audio asset:
    1. `Scenes/MainMenu.unity`
    2. `Scenes/Game.unity`
 3. Press Play from the `MainMenu` scene.
+
+## Autor
+
+Joaquin Aguilera
