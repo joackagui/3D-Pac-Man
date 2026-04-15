@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         score += points;
         collectedPellets++;
 
-        Debug.Log($"Collected {collectedPellets}/{totalPellets} — Score: {score}");
+        Debug.Log($"Collected {collectedPellets}/{totalPellets}");
         UIManager.Instance?.UpdateScore(score);
 
         if (totalPellets > 0 && collectedPellets >= totalPellets)
